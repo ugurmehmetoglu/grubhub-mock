@@ -7,8 +7,10 @@ const sequelize = require('../database/index.js').sequelize
 const Product = require('../database/index.js').Product
 
 
+
+
 app.use(bodyParser.urlencoded({ extended: false }))
- app.use(bodyParser.json())
+app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../static')))
 
 
