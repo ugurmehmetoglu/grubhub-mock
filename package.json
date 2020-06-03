@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ugurmehmetoglu/grubhub-mock#readme",
   "dependencies": {
+    "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
@@ -27,6 +28,16 @@
     "path": "^0.12.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sequelize": "^5.21.11"
+    "sequelize": "^5.21.11",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "css-loader": "^3.5.3",
+    "style-loader": "^1.2.1"
   }
 }
