@@ -30,7 +30,7 @@ const Product = sequelize.define("product", {
 
     rating:{
 
-        type:DataTypes.STRING,
+        type:DataTypes.INTEGER,
         allowNull:false
     }
 
