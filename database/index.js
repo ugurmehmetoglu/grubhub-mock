@@ -26,6 +26,7 @@ const Product = sequelize.define("product", {
     deliveryTime:{
         type:DataTypes.STRING,
         allowNull:false
+       
     },
 
     rating:{

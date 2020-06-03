@@ -1,0 +1,41 @@
+h1{
+    font-size:18px;
+}
+
+.card-template{
+height: 320px;
+width: 276px;
+border: 1px solid black;
+margin-top: 10px;
+
+
+}
+
+.img{
+    height: 50%;
+    width: 100%;
+
+}
+
+.text-name{
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    margin-top:4px;
+}
+
+.text-deliveryTime{
+
+    font-size: 16px;
+    font-style: normal;
+    text-align: left;
+    margin:4px 0px 0px 4px;
+    
+}
+
+.rating{
+margin:0px 4px 0px 0px ;
+font-size: 16px;
+text-align: right;
+
+}
