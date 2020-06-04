@@ -16,13 +16,11 @@ app.use(express.static(path.join(__dirname, '../static')))
 
 
 app.get('/foods', function(req,res){
-    console.log(res)
     Product.findAll()
     .then((result) => res.send(result))
 })
 
 app.post('/foods', function(req,res){
-    console.log(req.body)
     Product.create({
         imgURL:req.body.imgURL,
         name:req.body.name,
