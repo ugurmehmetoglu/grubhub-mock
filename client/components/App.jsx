@@ -58,20 +58,38 @@ function App() {
 
     return (
         <div>
-            <div>
-                <h1>Offers Near You</h1>
-                <input onChange={handleImgURL} type="text" placeholder="imgURL" />
-                <input onChange={handleName} type="text" placeholder="name" />
-                <input onChange={handleDeliveryTime} type="text" placeholder="delivery-time" />
-                <input onChange={handleRating} type="number" placeholder="rating" />
-                <button onClick={addFood}>Add Food</button>
+            <div className="top-container" >
+                <h1 className="logo">GRUBHUB</h1>
+                <input className="search-bar" type="text" placeholder="Search.." />
+            
+
 
             </div>
-            <div>
-                {foods.map((food, i) => <Card key={i} imgURL={food.imgURL} name={food.name} deliveryTime={food.deliveryTime} rating={food.rating} />)}
-            </div>
+            <div className="main-container">
+                <div className="main-container-left">
 
+                </div>
+                <div className="main-container-right">
+                    <div className="top-right">
+
+                        <h1 className="h1">Offers Near You</h1>
+                        <input className="input" onChange={handleImgURL} type="text" placeholder="imgURL" />
+                        <input className="input" onChange={handleName} type="text" placeholder="name" />
+                        <input className="input" onChange={handleDeliveryTime} type="text" placeholder="delivery-time" />
+                        <input className="input" onChange={handleRating} type="number" placeholder="rating" />
+                        <button className="add-button" onClick={addFood}>Add Food</button>
+
+                    </div>
+                    <div className="container">
+                        {foods.map((food, i) => <Card key={i} imgURL={food.imgURL} name={food.name} deliveryTime={food.deliveryTime} rating={food.rating} />)}
+                    </div>
+
+                </div>
+
+
+            </div>
         </div>
+
 
 
     )
