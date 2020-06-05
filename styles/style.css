@@ -15,8 +15,6 @@
 .main-container-right {
     
     width:75%;
-    display: flex;
-    flex-wrap: wrap;
     margin: 35px 0px 0px 0px;
     border-block-end: 1px solid #e8e1e1;
 }
@@ -91,12 +89,26 @@ text-align: right;
    
 
 }
+.search-bar-container{
+    display:flex;
+   
+   flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items:center;
+    border: 1px solid #8f8fa1;
+    background: #fbfbfc;
+    min-width: 170px;
+    border-radius: 6px;
+      
+  }
 
 .search-bar{
-    width: 300px;
-    height:20px;
-    margin-top:50px 0px 5px 75px;
-    display: block;
+ height:30px;
+border:none;
+  border-color: transparent;
+  outline: none;
+  font-size:20px;
+ 
 
 }
 .input{
