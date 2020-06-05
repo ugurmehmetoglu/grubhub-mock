@@ -14,6 +14,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../static')))
 
+app.get('/search', function(req,res){
+    var query = req.query.name
+    Product.findAll({where:{name:{[Op.like]: "%" + query + "%" }}})
+    .then(result => res.send(result))
+    .catch(err => res.send(err))
+})
+
 
 app.get('/foods', function(req,res){
     Product.findAll()
