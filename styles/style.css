@@ -1,3 +1,6 @@
+html {
+    overflow-x: hidden;
+  }
 .main-container {
     display: flex;
     
@@ -23,6 +26,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-left:1em;
+    
     
 }
 .card-template{
@@ -85,7 +89,7 @@ text-align: right;
     color: Red;
     margin-right:150px;
     margin-top:20px;
-    font-weight: 2000;
+    font-weight: bolder;
    
 
 }
@@ -128,3 +132,32 @@ border:none;
 .top-right{
     padding-left: 1em;
 }
+
+.cuisine-wrapper{
+    display:flex;
+      justify-content:space-between;
+      font-weight: bold;
+  }
+  
+  .cuisine-img{
+    border-radius:50%;
+    text-align:center;
+  }
+  
+  .img-text{
+    font-size:12px;
+  
+  }
+  
+  .item {
+      vertical-align: top;
+      text-align: center;
+      width: 120px;
+        margin:10px 5px 5px 10px;
+  }
+
+  .cuisines{
+      display:flex;
+      overflow: auto;
+      
+  }
