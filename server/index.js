@@ -6,6 +6,7 @@ const port = 3000
 const{Sequelize, Op}=require('sequelize')
 const sequelize = require('../database/index.js').sequelize
 const Product = require('../database/index.js').Product
+const Cuisine = require('../database/index.js').Cuisine
 
 
 
@@ -28,6 +29,7 @@ app.get('/foods', function(req,res){
 })
 
 app.post('/foods', function(req,res){
+   
     Product.create({
         imgURL:req.body.imgURL,
         name:req.body.name,
@@ -35,8 +37,22 @@ app.post('/foods', function(req,res){
         rating:req.body.rating
        
     })
-    .then(result => res.send(result))
+    .then(res => res.send(res))
     .catch(err =>res.send(err))
+})
+
+app.get('/cuisines', function(req,res){
+    Cuisine.findAll()
+    .then(result => res.send(result))
+})
+
+app.post('/cuisines', function(req,res){
+    Cuisine.create({
+        cuisineImgURL:req.body.cuisineImgURL,
+        cuisineName:req.body.cuisineName
+    })
+    .then(res => res.send(res))
+    .catch(err => res.send(err))
 })
 
 
