@@ -42,11 +42,26 @@ const Product = sequelize.define("product", {
 
 Product.sync();
 
+const Cuisine = sequelize.define("cuisine", {
+    cuisineImgURL:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    cuisineName:{
+        type:DataTypes.STRING,
+        allowNull:false
+    }
+},{
+    timestamps:false
+})
+
+
 
 
 
 module.exports={
     sequelize,
-    Product
+    Product,
+   Cuisine
 }
 
