@@ -55,13 +55,39 @@ const Cuisine = sequelize.define("cuisine", {
     timestamps:false
 })
 
+const Item = sequelize.define("item", {
+    rating:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    restaurant:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    deliveryTime:{
+        type:DataTypes.STRING,
+    allowNull:false
+    },
 
+    image:{
+        type:DataTypes.STRING,
+        allowNull:false
+    },
+    cuisine:{
+        type:DataTypes.STRING,
+        allowNull:false
+    }
 
+},{
+    timestamps:false
+})
 
+Item.sync();
 
 module.exports={
     sequelize,
     Product,
-   Cuisine
+   Cuisine,
+   Item
 }
 
